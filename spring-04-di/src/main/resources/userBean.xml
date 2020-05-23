@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+        <!--p命名空间注入,可以直接注入属性的值, property,如果要用p命名空间,那么必须要有第4行的对p的约束-->
+        <bean id="user" class="com.sonia.pojo.User" p:name="sonia" p:age="18" scope="singleton"></bean>
+        <!--c命名空间通过构造器注入,有参和无参构造都需要,不然会出错-->
+        <bean id="user2" class="com.sonia.pojo.User" c:age="18" c:name="zhuzhu"></bean>
+
+</beans>

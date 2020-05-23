@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="address" class="com.sonia.pojo.Address">
+        <property name="address" value="浙江"></property>
+    </bean>
+
+    <bean id="student" class="com.sonia.pojo.Student">
+        <!--第一种,普通值注入-->
+        <property name="name" value="sonia"></property>
+        <!--第二种,bean注入-->
+        <property name="address" ref="address"></property>
+        <property name="books">
+            <array>
+                <value>红楼梦</value>
+                <value>西游记</value>
+                <value>水浒传</value>
+                <value>三国演义</value>
+            </array>
+        </property>
+
+        <property name="hobbys">
+            <list>
+                <value>跳舞</value>
+                <value>打麻将</value>
+            </list>
+        </property>
+
+        <property name="cards">
+            <map>
+                <entry key="身份证" value="123456888888881234"></entry>
+                <entry key="银行卡" value="1234567890234567"></entry>
+            </map>
+        </property>
+
+        <property name="games">
+            <set>
+                <value>LOL</value>
+                <value>COC</value>
+                <value>BOB</value>
+            </set>
+        </property>
+
+        <property name="wife">
+            <null/>
+        </property>
+
+        <property name="info">
+            <props>
+                <prop key="学号">3325261020</prop>
+                <prop key="性别">女</prop>
+                <prop key="username">sonia</prop>
+                <prop key="password">123456</prop>
+            </props>
+        </property>
+    </bean>
+
+
+
+</beans>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:annotation-config/>
+
+    <bean id="cat111" class="com.sonia.pojo.Cat"></bean>
+    <bean id="cat222" class="com.sonia.pojo.Cat"></bean>
+    <bean id="dog222" class="com.sonia.pojo.Dog"></bean>
+    <bean id="dog111" class="com.sonia.pojo.Dog"></bean>
+    <bean id="people" class="com.sonia.pojo.People"></bean>
+    <!--byName会自动在容器上下文中查找,需要保证所有的bean的id唯一,和自己对象set方法后面的值对应的beanid-->
+    <!--byType会自动在容器上下文中查找, 需要保证所有的bean的类型e唯一,和自己对象set方法后面的值对应的beanid-->
+   <!-- <bean id="people" class="com.sonia.pojo.People" autowire="byType">
+        &lt;!&ndash;<property name="cat" ref="cat"></property>
+        <property name="dog" ref="dog"></property>
+        <property name="name" value="sonia"></property>&ndash;&gt;
+    </bean>-->
+
+
+</beans>

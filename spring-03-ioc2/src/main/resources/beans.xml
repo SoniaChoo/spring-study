@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+<!--id是bean的唯一标识符,class是是对象所对应的全限定名,name也是别名,name比alias更加高级,可以取多个别名->
+    <bean id="user" class="com.sonia.pojo.User">
+        <property name="name" value="sonia"></property>
+        <!- 无参构造<property name="name" value="sonia"></property>-->
+        <!--有参构造方式一<constructor-arg index="0" value="sonia"></constructor-arg>-->
+        <!--有参构造方式二 不建议使用<constructor-arg type="java.lang.String" value="猪猪"></constructor-arg>-->
+        <!--有参构造方式三,这个方法的前提是必须有无参构造<constructor-arg name="name" value="宝贝猪猪"></constructor-arg>-->
+    <!--</bean>-->
+
+    <bean id="usert" class="com.sonia.pojo.UserT" name="user3,u2;u4">
+        <constructor-arg index="0" value="tony"></constructor-arg>
+    </bean>
+
+    <!--在配置文件加载的时候,容器中管理的对象就已经初始化了-->
+    <!--<alias name="user" alias="user2"></alias>-->
+
+</beans>
