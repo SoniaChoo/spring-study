@@ -1,5 +1,8 @@
 package com.sonia.pojo;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class UserT {
     private String name;
 

@@ -1,22 +1,20 @@
 package com.sonia.pojo;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-//@Component
-//public class User {
-//    //相当于<property name = "name" value="zhuzhu"/>
-//    @Value("zhuzhu")
-//    public String name;
-//
-//}
+//这里的component注解的意思和spring-06中的含义是一样的,就是说明这个类被spring接管了,注册到了容器中.
+@Component
 public class User {
-//    @Value("chou yuguo")
-    private String name = "zhuzhu";
+    private String name;
 
     public String getName() {
         return name;
+    }
+
+    @Value("sonia")//这个就是属性注入值
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Override
